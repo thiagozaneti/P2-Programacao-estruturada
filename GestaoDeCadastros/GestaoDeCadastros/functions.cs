@@ -190,11 +190,22 @@ namespace GestaoDeCadastros
         }
 
         //atualizar usuario 
-        
-
-
 
         //-----------------------------//
+
+        public static void AdicionarProduto(string Nome, double preco, string descricao)
+        {
+            // Verifica se o arquivo existe
+            if (!File.Exists(caminhoArquivoCsvUsuarios))
+            {
+                CriarArquivosSeNaoExistir();
+            }
+            using (StreamWriter sw = new StreamWriter(caminhoArquivoCsvUsuarios, true))
+            {
+                // Adiciona o novo usuário ao arquivo CSV
+                sw.WriteLine($"{Nome}, {preco}, {descricao}");
+            }
+        }
 
     }
 }
