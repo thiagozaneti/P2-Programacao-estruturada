@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\source\\repos\\P2-Programacao-estruturada\\GestaoDeCadastros\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|c:\\users\\thiago\\source\\repos\\p2-programacao-estruturada\\gestaodecadastros\\gestaodecadastros\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|solutionrelative:gestaodecadastros\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|c:\\users\\thiago\\source\\repos\\p2-programacao-estruturada\\gestaodecadastros\\gestaodecadastros\\cadastrodeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|solutionrelative:gestaodecadastros\\cadastrodeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|c:\\users\\thiago\\source\\repos\\p2-programacao-estruturada\\gestaodecadastros\\gestaodecadastros\\cadastrodeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|C:\\Users\\Thiago\\source\\repos\\P2-Programacao-estruturada\\GestaoDeCadastros\\gestaodecadastros\\cadastrodeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|solutionrelative:gestaodecadastros\\cadastrodeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,11 +19,7 @@
       "RelativeMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|solutionrelative:gestaodecadastros\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|c:\\users\\thiago\\source\\repos\\p2-programacao-estruturada\\gestaodecadastros\\gestaodecadastros\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|solutionrelative:gestaodecadastros\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|c:\\users\\thiago\\source\\repos\\p2-programacao-estruturada\\gestaodecadastros\\gestaodecadastros\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|C:\\Users\\Thiago\\source\\repos\\P2-Programacao-estruturada\\GestaoDeCadastros\\gestaodecadastros\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F198DF1B-040E-42FA-B2AF-5FED65F1B637}|GestaoDeCadastros\\GestaoDeCadastros.csproj|solutionrelative:gestaodecadastros\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -38,24 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CadastroDeUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\P2-Programacao-estruturada\\GestaoDeCadastros\\GestaoDeCadastros\\CadastroDeUsuarios.cs",
               "RelativeDocumentMoniker": "GestaoDeCadastros\\CadastroDeUsuarios.cs",
               "ToolTip": "C:\\Users\\Thiago\\source\\repos\\P2-Programacao-estruturada\\GestaoDeCadastros\\GestaoDeCadastros\\CadastroDeUsuarios.cs",
               "RelativeToolTip": "GestaoDeCadastros\\CadastroDeUsuarios.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAowBUAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T18:02:47.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CadastroDeUsuarios.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\P2-Programacao-estruturada\\GestaoDeCadastros\\GestaoDeCadastros\\CadastroDeUsuarios.cs",
               "RelativeDocumentMoniker": "GestaoDeCadastros\\CadastroDeUsuarios.cs",
@@ -66,18 +66,14 @@
               "EditorCaption": " [Projeto]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "homePage.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\P2-Programacao-estruturada\\GestaoDeCadastros\\GestaoDeCadastros\\homePage.cs",
               "RelativeDocumentMoniker": "GestaoDeCadastros\\homePage.cs",
               "ToolTip": "C:\\Users\\Thiago\\source\\repos\\P2-Programacao-estruturada\\GestaoDeCadastros\\GestaoDeCadastros\\homePage.cs",
               "RelativeToolTip": "GestaoDeCadastros\\homePage.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACsAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAA1wCsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T17:43:19.745Z",
               "EditorCaption": ""
@@ -91,12 +87,11 @@
               "ToolTip": "C:\\Users\\Thiago\\source\\repos\\P2-Programacao-estruturada\\GestaoDeCadastros\\GestaoDeCadastros\\homePage.cs [Projeto]",
               "RelativeToolTip": "GestaoDeCadastros\\homePage.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T17:39:41.55Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-06-07T17:39:41.55Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "functions.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\P2-Programacao-estruturada\\GestaoDeCadastros\\GestaoDeCadastros\\functions.cs",
               "RelativeDocumentMoniker": "GestaoDeCadastros\\functions.cs",
@@ -104,8 +99,7 @@
               "RelativeToolTip": "GestaoDeCadastros\\functions.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAQwAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T17:02:18.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-07T17:02:18.681Z"
             },
             {
               "$type": "Document",

@@ -42,6 +42,10 @@ namespace GestaoDeCadastros
                 homePage.Show();
 
             }
+            else
+            {
+                MessageBox.Show("Usuario ou senha inválidos");
+            }
 
         }
     }

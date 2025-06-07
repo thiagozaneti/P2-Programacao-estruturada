@@ -16,3 +16,4 @@ C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\Gestao
 C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.genruntimeconfig.cache
 C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\ref\GestaoDeCadastros.dll
 C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.homePage.resources
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.CadastroDeUsuarios.resources
