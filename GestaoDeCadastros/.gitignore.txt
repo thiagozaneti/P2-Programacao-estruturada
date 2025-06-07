@@ -1,0 +1,14 @@
+# Ignorar arquivos/pastas temporárias do Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignorar binários e objetos
+bin/
+obj/
+
+# Outros arquivos comuns
+*.log
+*.cache
