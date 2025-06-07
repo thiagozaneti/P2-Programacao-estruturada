@@ -38,6 +38,7 @@
             btn_alterar_senha_usuario_comum = new Button();
             btn_cadastrar_novo_usuario = new Button();
             dataGridView_Admin = new DataGridView();
+            btn_Excluir_Usuario = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Admin).BeginInit();
             SuspendLayout();
             // 
@@ -115,6 +116,7 @@
             btn_cadastrar_novo_usuario.TabIndex = 8;
             btn_cadastrar_novo_usuario.Text = "Cadastrar";
             btn_cadastrar_novo_usuario.UseVisualStyleBackColor = true;
+            btn_cadastrar_novo_usuario.Click += btn_cadastrar_novo_usuario_Click;
             // 
             // dataGridView_Admin
             // 
@@ -125,11 +127,22 @@
             dataGridView_Admin.Size = new Size(496, 306);
             dataGridView_Admin.TabIndex = 9;
             // 
+            // btn_Excluir_Usuario
+            // 
+            btn_Excluir_Usuario.BackColor = Color.Red;
+            btn_Excluir_Usuario.Location = new Point(640, 94);
+            btn_Excluir_Usuario.Name = "btn_Excluir_Usuario";
+            btn_Excluir_Usuario.Size = new Size(117, 32);
+            btn_Excluir_Usuario.TabIndex = 10;
+            btn_Excluir_Usuario.Text = "Excluir";
+            btn_Excluir_Usuario.UseVisualStyleBackColor = false;
+            // 
             // CadastroDeUsuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(769, 450);
+            Controls.Add(btn_Excluir_Usuario);
             Controls.Add(dataGridView_Admin);
             Controls.Add(btn_cadastrar_novo_usuario);
             Controls.Add(btn_alterar_senha_usuario_comum);
@@ -160,5 +173,6 @@
         private Button btn_alterar_senha_usuario_comum;
         private Button btn_cadastrar_novo_usuario;
         private DataGridView dataGridView_Admin;
+        private Button btn_Excluir_Usuario;
     }
 }

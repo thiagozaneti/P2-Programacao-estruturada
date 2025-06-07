@@ -109,5 +109,19 @@ namespace GestaoDeCadastros
 
 
 
+        public static void AdicionarUsuario(string usuario, string senha)
+        {
+            // Verifica se o arquivo existe
+            if (!File.Exists(caminhoArquivoCsvUsuarios))
+            {
+                CriarArquivosSeNaoExistir();
+            }
+            using(StreamWriter sw = new StreamWriter(caminhoArquivoCsvUsuarios, true))
+            {
+                // Adiciona o novo usuário ao arquivo CSV
+                sw.WriteLine($"{usuario}, {senha}");
+            }
+        }
+
     }
 }
