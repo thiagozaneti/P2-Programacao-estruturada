@@ -51,5 +51,28 @@ namespace GestaoDeCadastros
             dataGridView_Produto.DataSource = functions.LerDatabaseProduto(); // Atualiza o DataGridView com os produtos cadastrados
         }
 
+        private void btn_Excluir_Produto_Click(object sender, EventArgs e)
+        {
+            // Verifica se existe alguma linha selecionada
+            if (dataGridView_Produto.SelectedRows.Count > 0)
+            {
+                // Obtém o nome do usuário da primeira célula da linha selecionada
+                string produto = dataGridView_Produto.SelectedRows[0].Cells[0].Value?.ToString();
+                // Não permitir excluir o ADMIN
+                // Confirma exclusão
+                var confirm = MessageBox.Show($"Tem certeza que deseja excluir o usuário '{produto}'?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                {
+                    functions.RemoverProduto(produto);
+                    MessageBox.Show("Usuário excluído com sucesso!");
+                    // Atualiza o DataGridView
+                    dataGridView_Produto.DataSource = functions.LerDatabaseProduto();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um usuário para excluir.");
+            }
+        }
     }
 }

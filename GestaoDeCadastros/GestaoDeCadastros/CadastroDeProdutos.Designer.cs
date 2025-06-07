@@ -50,6 +50,7 @@
             btn_Excluir_Produto.TabIndex = 21;
             btn_Excluir_Produto.Text = "Excluir";
             btn_Excluir_Produto.UseVisualStyleBackColor = false;
+            btn_Excluir_Produto.Click += btn_Excluir_Produto_Click;
             // 
             // dataGridView_Produto
             // 
