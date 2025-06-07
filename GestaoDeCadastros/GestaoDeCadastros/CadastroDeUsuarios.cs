@@ -15,6 +15,7 @@ namespace GestaoDeCadastros
         public CadastroDeUsuarios()
         {
             InitializeComponent();
+            dataGridView_Admin.DataSource = functions.LerDatabaseUsuario();
         }
 
         private void CadastroDeUsuarios_Load(object sender, EventArgs e)
@@ -22,7 +23,9 @@ namespace GestaoDeCadastros
             if (functions.ObterUsuarioLogado() != "ADMIN")
             {
                 // Esconder campos de admin para usuários comuns
-
+                label2.Visible = false;
+                label3.Visible = false;
+                btn_Excluir_Usuario.Visible = false;
                 txt_novo_usuario.Visible = false;
                 txt_nova_senha.Visible = false;
                 btn_cadastrar_novo_usuario.Visible = false;
@@ -49,8 +52,21 @@ namespace GestaoDeCadastros
 
         private void btn_cadastrar_novo_usuario_Click(object sender, EventArgs e)
         {
-            
+            string novoUsuario = txt_novo_usuario.Text.Trim();
+            string novaSenha = txt_nova_senha.Text.Trim();
 
+            if (string.IsNullOrEmpty(novoUsuario) || string.IsNullOrEmpty(novaSenha))
+            {
+                MessageBox.Show("Por favor, preencha todos os campos.");
+                return;
+            }
+            functions.AdicionarUsuario(novoUsuario, novaSenha);
+            MessageBox.Show("Usuário cadastrado com sucesso!");
+            // Limpar os campos após o cadastro
+            txt_novo_usuario.Clear();
+            txt_nova_senha.Clear();
+            // Atualizar o DataGridView
+            dataGridView_Admin.DataSource = functions.LerDatabaseUsuario();
         }
     }
 }

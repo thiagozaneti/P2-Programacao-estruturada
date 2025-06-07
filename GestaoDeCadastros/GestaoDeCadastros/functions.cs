@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -121,6 +122,36 @@ namespace GestaoDeCadastros
                 // Adiciona o novo usuário ao arquivo CSV
                 sw.WriteLine($"{usuario}, {senha}");
             }
+        }
+        public static DataTable LerDatabaseUsuario()
+        {
+            DataTable dt = new DataTable();
+
+            if (!File.Exists(caminhoArquivoCsvUsuarios)) return dt;
+
+            using (StreamReader sr = new StreamReader(caminhoArquivoCsvUsuarios))
+            {
+                string linha;
+                bool primeiraLinha = true;
+
+                while ((linha = sr.ReadLine()) != null)
+                {
+                    string[] campos = linha.Split(',');
+
+                    if (primeiraLinha)
+                    {
+                        foreach (string col in campos)
+                            dt.Columns.Add(col);
+                        primeiraLinha = false;
+                    }
+                    else
+                    {
+                        dt.Rows.Add(campos);
+                    }
+                }
+            }
+
+            return dt;
         }
 
     }
