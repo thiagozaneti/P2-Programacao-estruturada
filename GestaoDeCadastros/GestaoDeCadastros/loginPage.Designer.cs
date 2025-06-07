@@ -31,8 +31,8 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txt_usuario = new TextBox();
+            txt_senha = new TextBox();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -64,19 +64,19 @@
             label3.TabIndex = 2;
             label3.Text = "Senha";
             // 
-            // textBox1
+            // txt_usuario
             // 
-            textBox1.Location = new Point(239, 206);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(285, 27);
-            textBox1.TabIndex = 3;
+            txt_usuario.Location = new Point(239, 206);
+            txt_usuario.Name = "txt_usuario";
+            txt_usuario.Size = new Size(285, 27);
+            txt_usuario.TabIndex = 3;
             // 
-            // textBox2
+            // txt_senha
             // 
-            textBox2.Location = new Point(239, 301);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(285, 27);
-            textBox2.TabIndex = 4;
+            txt_senha.Location = new Point(239, 301);
+            txt_senha.Name = "txt_senha";
+            txt_senha.Size = new Size(285, 27);
+            txt_senha.TabIndex = 4;
             // 
             // button1
             // 
@@ -88,6 +88,7 @@
             button1.TabIndex = 5;
             button1.Text = "Logar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // loginPage
             // 
@@ -95,13 +96,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txt_senha);
+            Controls.Add(txt_usuario);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "loginPage";
             Text = "loginPage";
+            Load += loginPage_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -111,8 +113,8 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txt_usuario;
+        private TextBox txt_senha;
         private Button button1;
     }
 }

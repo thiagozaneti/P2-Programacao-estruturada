@@ -13,6 +13,9 @@ namespace GestaoDeCadastros
         public static string caminhoArquivoCsvProdutos = @"C:\Users\Public\Documents\products.csv";
         public static string caminhoArquivoCsvPedidos = @"C:\Users\Public\Documents\orders.txt";
 
+
+
+        //essa função cria os arquivos se não existirem
         public static void CriarArquivosSeNaoExistir()
         {
             string pastaDestino = @"C:\Users\Public\Documents";
@@ -58,6 +61,31 @@ namespace GestaoDeCadastros
 
 
         }
+
+        //------------------------//
+
+
+
+
+        //funcao de login
+        public static bool EfetuarLogin(string usuario, string senha)
+        {
+            // Lê o arquivo CSV de usuários
+            string[] linhas = File.ReadAllLines(caminhoArquivoCsvUsuarios);
+            // Verifica se o usuário e senha estão corretos
+            foreach (string linha in linhas.Skip(1)) // Pula o cabeçalho
+            {
+                string[] partes = linha.Split(',');
+                if (partes.Length >= 2 && partes[0].Trim() == usuario && partes[1].Trim() == senha)
+                {
+                    return true; // Login bem-sucedido
+                }
+            }
+            return false; // Login falhou
+        }
+        //-------------------------//
+
+
 
     }
 }

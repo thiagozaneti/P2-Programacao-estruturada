@@ -1,0 +1,17 @@
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\bin\Debug\net8.0-windows\GestaoDeCadastros.exe
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\bin\Debug\net8.0-windows\GestaoDeCadastros.deps.json
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\bin\Debug\net8.0-windows\GestaoDeCadastros.runtimeconfig.json
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\bin\Debug\net8.0-windows\GestaoDeCadastros.dll
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\bin\Debug\net8.0-windows\GestaoDeCadastros.pdb
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.loginPage.resources
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.csproj.GenerateResource.cache
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.AssemblyInfoInputs.cache
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.AssemblyInfo.cs
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.sourcelink.json
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.dll
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\refint\GestaoDeCadastros.dll
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.pdb
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\GestaoDeCadastros.genruntimeconfig.cache
+C:\Users\Thiago\source\repos\P2-Programacao-estruturada\GestaoDeCadastros\GestaoDeCadastros\obj\Debug\net8.0-windows\ref\GestaoDeCadastros.dll
