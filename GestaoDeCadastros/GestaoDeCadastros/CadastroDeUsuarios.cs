@@ -98,5 +98,9 @@ namespace GestaoDeCadastros
             }
         }
 
+        private void dataGridView_Admin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

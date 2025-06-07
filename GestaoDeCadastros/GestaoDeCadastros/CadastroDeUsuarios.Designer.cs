@@ -126,6 +126,7 @@
             dataGridView_Admin.RowHeadersWidth = 51;
             dataGridView_Admin.Size = new Size(496, 306);
             dataGridView_Admin.TabIndex = 9;
+            dataGridView_Admin.CellContentClick += dataGridView_Admin_CellContentClick;
             // 
             // btn_Excluir_Usuario
             // 

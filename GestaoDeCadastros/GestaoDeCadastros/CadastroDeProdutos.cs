@@ -15,6 +15,7 @@ namespace GestaoDeCadastros
         public CadastroDeProdutos()
         {
             InitializeComponent();
+            dataGridView_Produto.DataSource = functions.LerDatabaseProduto();
         }
 
         private void CadastroDeProdutos_Load(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace GestaoDeCadastros
             txt_novo_produto.Clear();
             txt_novo_preco.Clear();
             txt_nova_descricao.Clear();
+            dataGridView_Produto.DataSource = functions.LerDatabaseProduto(); // Atualiza o DataGridView com os produtos cadastrados
         }
 
     }

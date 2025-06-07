@@ -139,26 +139,36 @@ namespace GestaoDeCadastros
             {
                 string linha;
                 bool primeiraLinha = true;
+                int numeroColunas = 0;
 
                 while ((linha = sr.ReadLine()) != null)
                 {
+                    // Ignora linhas em branco
+                    if (string.IsNullOrWhiteSpace(linha))
+                        continue;
+
                     string[] campos = linha.Split(',');
 
                     if (primeiraLinha)
                     {
                         foreach (string col in campos)
-                            dt.Columns.Add(col);
+                            dt.Columns.Add(col.Trim());
+                        numeroColunas = dt.Columns.Count;
                         primeiraLinha = false;
                     }
                     else
                     {
-                        dt.Rows.Add(campos);
+                        // Só adiciona se a quantidade de campos for igual ao número de colunas
+                        if (campos.Length == numeroColunas)
+                            dt.Rows.Add(campos.Select(c => c.Trim()).ToArray());
+                        
                     }
                 }
             }
 
             return dt;
         }
+
 
         //funcao para remover usuario
         public static void RemoverUsuario(string usuario)
@@ -197,15 +207,15 @@ namespace GestaoDeCadastros
         //Crud produtos 
         
         //-----------------------------//
-        ]//funcao de adicionar produto
+        //funcao de adicionar produto
         public static void AdicionarProduto(string Nome, double preco, string descricao)
         {
             // Verifica se o arquivo existe
-            if (!File.Exists(caminhoArquivoCsvUsuarios))
+            if (!File.Exists(caminhoArquivoCsvProdutos))
             {
                 CriarArquivosSeNaoExistir();
             }
-            using (StreamWriter sw = new StreamWriter(caminhoArquivoCsvUsuarios, true))
+            using (StreamWriter sw = new StreamWriter(caminhoArquivoCsvProdutos, true))
             {
                 // Adiciona o novo usuário ao arquivo CSV
                 sw.WriteLine($"{Nome}, {preco}, {descricao}");
@@ -218,29 +228,66 @@ namespace GestaoDeCadastros
 
             if (!File.Exists(caminhoArquivoCsvProdutos)) return dt;
 
-            using (StreamReader sr = new StreamReader(caminhoArquivoCsvUsuarios))
+            using (StreamReader sr = new StreamReader(caminhoArquivoCsvProdutos))
             {
                 string linha;
                 bool primeiraLinha = true;
+                int numeroColunas = 0;
 
                 while ((linha = sr.ReadLine()) != null)
                 {
+                    // Ignora linhas em branco
+                    if (string.IsNullOrWhiteSpace(linha))
+                        continue;
+
                     string[] campos = linha.Split(',');
 
                     if (primeiraLinha)
                     {
                         foreach (string col in campos)
-                            dt.Columns.Add(col);
+                            dt.Columns.Add(col.Trim());
+                        numeroColunas = dt.Columns.Count;
                         primeiraLinha = false;
                     }
                     else
                     {
-                        dt.Rows.Add(campos);
+                        // Só adiciona se a quantidade de campos for igual ao número de colunas
+                        if (campos.Length == numeroColunas)
+                            dt.Rows.Add(campos.Select(c => c.Trim()).ToArray());
                     }
                 }
             }
 
             return dt;
+        }
+
+
+        public static void RemoverProduto(string usuario)
+        {
+            //verificação se o arquivo não existe
+            if (!File.Exists(caminhoArquivoCsvProdutos))
+                CriarArquivosSeNaoExistir();
+            //armazenar o conteúdo do arquivo em uma lista
+            var linhas = File.ReadAllLines(caminhoArquivoCsvProdutos).ToList();
+
+            // Pular a primeira linha (cabeçalho) e regravar o arquivo
+            using (StreamWriter sw = new StreamWriter(caminhoArquivoCsvProdutos))
+            {
+                // Verifica se a lista não está vazia
+                sw.WriteLine(linhas[0]); // Cabeçalho
+
+                // Percorre as linhas a partir da segunda linha 
+                foreach (var linha in linhas.Skip(1))
+                {
+                    // Divide a linha em partes 
+                    string[] partes = linha.Split(',');
+                    // Verifica se a linha contém pelo menos duas partes e se o usuário não é o que está sendo removido
+                    if (partes.Length >= 2 && partes[0].Trim() != usuario.Trim())
+                    {
+                        sw.WriteLine(linha);
+                    }
+                }
+            }
         }
 
     }
