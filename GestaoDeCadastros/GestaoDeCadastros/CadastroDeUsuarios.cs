@@ -68,5 +68,35 @@ namespace GestaoDeCadastros
             // Atualizar o DataGridView
             dataGridView_Admin.DataSource = functions.LerDatabaseUsuario();
         }
+
+        private void btn_Excluir_Usuario_Click(object sender, EventArgs e)
+        {
+            // Verifica se existe alguma linha selecionada
+            if (dataGridView_Admin.SelectedRows.Count > 0)
+            {
+                // Obtém o nome do usuário da primeira célula da linha selecionada
+                string usuario = dataGridView_Admin.SelectedRows[0].Cells[0].Value?.ToString();
+                // Não permitir excluir o ADMIN
+                if (usuario == "ADMIN")
+                {
+                    MessageBox.Show("Não é permitido excluir o usuário ADMIN!");
+                    return;
+                }
+                // Confirma exclusão
+                var confirm = MessageBox.Show($"Tem certeza que deseja excluir o usuário '{usuario}'?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                {
+                    functions.RemoverUsuario(usuario);
+                    MessageBox.Show("Usuário excluído com sucesso!");
+                    // Atualiza o DataGridView
+                    dataGridView_Admin.DataSource = functions.LerDatabaseUsuario();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um usuário para excluir.");
+            }
+        }
+
     }
 }

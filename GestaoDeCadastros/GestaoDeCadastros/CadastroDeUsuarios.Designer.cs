@@ -136,6 +136,7 @@
             btn_Excluir_Usuario.TabIndex = 10;
             btn_Excluir_Usuario.Text = "Excluir";
             btn_Excluir_Usuario.UseVisualStyleBackColor = false;
+            btn_Excluir_Usuario.Click += btn_Excluir_Usuario_Click;
             // 
             // CadastroDeUsuarios
             // 

@@ -110,6 +110,10 @@ namespace GestaoDeCadastros
 
 
 
+
+        //Crud Usuario
+
+        //funcao de adicionar usuario
         public static void AdicionarUsuario(string usuario, string senha)
         {
             // Verifica se o arquivo existe
@@ -123,6 +127,8 @@ namespace GestaoDeCadastros
                 sw.WriteLine($"{usuario}, {senha}");
             }
         }
+
+        //funcao de leitura de arquivo usuario
         public static DataTable LerDatabaseUsuario()
         {
             DataTable dt = new DataTable();
@@ -153,6 +159,42 @@ namespace GestaoDeCadastros
 
             return dt;
         }
+
+        //funcao para remover usuario
+        public static void RemoverUsuario(string usuario)
+        {
+            //verificação se o arquivo não existe
+            if (!File.Exists(caminhoArquivoCsvUsuarios))
+                CriarArquivosSeNaoExistir();
+            //armazenar o conteúdo do arquivo em uma lista
+            var linhas = File.ReadAllLines(caminhoArquivoCsvUsuarios).ToList();
+
+            // Pular a primeira linha (cabeçalho) e regravar o arquivo
+            using (StreamWriter sw = new StreamWriter(caminhoArquivoCsvUsuarios))
+            {
+                // Verifica se a lista não está vazia
+                sw.WriteLine(linhas[0]); // Cabeçalho
+
+                // Percorre as linhas a partir da segunda linha 
+                foreach (var linha in linhas.Skip(1))
+                {
+                    // Divide a linha em partes 
+                    string[] partes = linha.Split(',');
+                    // Verifica se a linha contém pelo menos duas partes e se o usuário não é o que está sendo removido
+                    if (partes.Length >= 2 && partes[0].Trim() != usuario.Trim())
+                    {
+                        sw.WriteLine(linha);
+                    }
+                }
+            }
+        }
+
+        //atualizar usuario 
+        
+
+
+
+        //-----------------------------//
 
     }
 }
