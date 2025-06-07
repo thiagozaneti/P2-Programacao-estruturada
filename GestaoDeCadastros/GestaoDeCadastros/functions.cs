@@ -12,6 +12,7 @@ namespace GestaoDeCadastros
         public static string caminhoArquivoCsvClientes = @"C:\Users\Public\Documents\clients.csv";
         public static string caminhoArquivoCsvProdutos = @"C:\Users\Public\Documents\products.csv";
         public static string caminhoArquivoCsvPedidos = @"C:\Users\Public\Documents\orders.txt";
+        public static string CaminhoUsuarioLogado = @"C:\Users\Public\Documents\usuario_logado.txt";
 
 
 
@@ -78,10 +79,31 @@ namespace GestaoDeCadastros
                 string[] partes = linha.Split(',');
                 if (partes.Length >= 2 && partes[0].Trim() == usuario && partes[1].Trim() == senha)
                 {
+                    File.WriteAllText(CaminhoUsuarioLogado, usuario.Trim());
                     return true; // Login bem-sucedido
                 }
             }
             return false; // Login falhou
+        }
+        //-------------------------//
+
+
+        //funcao para salvar o usuário logado
+        public static string ObterUsuarioLogado()
+        {
+            if (File.Exists(CaminhoUsuarioLogado))
+            {
+                return File.ReadAllText(CaminhoUsuarioLogado).Trim();
+            }
+            return "";
+        }
+
+        public static void Logout()
+        {
+            if (File.Exists(CaminhoUsuarioLogado))
+            {
+                File.Delete(CaminhoUsuarioLogado);
+            }
         }
         //-------------------------//
 
