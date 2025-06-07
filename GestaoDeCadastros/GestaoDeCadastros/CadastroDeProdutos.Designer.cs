@@ -68,6 +68,7 @@
             btn_cadastrar_novo_produto.TabIndex = 19;
             btn_cadastrar_novo_produto.Text = "Cadastrar";
             btn_cadastrar_novo_produto.UseVisualStyleBackColor = true;
+            btn_cadastrar_novo_produto.Click += btn_cadastrar_novo_produto_Click;
             // 
             // txt_novo_preco
             // 

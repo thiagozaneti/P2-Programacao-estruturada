@@ -15,6 +15,7 @@ namespace GestaoDeCadastros
     {
 
         CadastroDeUsuarios paginaDeCadastroDeUsuario = new CadastroDeUsuarios();
+        CadastroDeProdutos paginaDeCadastroDeProdutos = new CadastroDeProdutos();
         public string userNameInHomepage = "";
 
         public homePage()
@@ -22,10 +23,6 @@ namespace GestaoDeCadastros
             InitializeComponent();
         }
 
-        private void cadastrarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void homePage_Load(object sender, EventArgs e)
         {
@@ -40,6 +37,16 @@ namespace GestaoDeCadastros
         private void cadastrarUsuarioNavbar_Click(object sender, EventArgs e)
         {
             paginaDeCadastroDeUsuario.ShowDialog(); //exibindo a pagina de cadastro de usuario
+        }
+
+        private void cadastrarPedidosNavbar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadastrarProdutosNavbar_Click(object sender, EventArgs e)
+        {
+            paginaDeCadastroDeProdutos.ShowDialog(); //exibindo a pagina de cadastro de produtos
         }
     }
 }

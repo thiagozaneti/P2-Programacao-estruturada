@@ -32,8 +32,9 @@
             menuStrip1 = new MenuStrip();
             cadastrarUsuarioNavbar = new ToolStripMenuItem();
             cadastrarClientesNavbar = new ToolStripMenuItem();
-            cadastrarProdutosNavbar = new ToolStripMenuItem();
             cadastrarPedidosNavbar = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            cadastrarProdutosNavbar = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrarUsuarioNavbar, cadastrarClientesNavbar, cadastrarProdutosNavbar, cadastrarPedidosNavbar });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrarUsuarioNavbar, cadastrarClientesNavbar, cadastrarPedidosNavbar, toolStripMenuItem1, cadastrarProdutosNavbar });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 28);
@@ -71,18 +72,24 @@
             cadastrarClientesNavbar.Size = new Size(142, 24);
             cadastrarClientesNavbar.Text = "Cadastrar Clientes";
             // 
-            // cadastrarProdutosNavbar
-            // 
-            cadastrarProdutosNavbar.Name = "cadastrarProdutosNavbar";
-            cadastrarProdutosNavbar.Size = new Size(149, 24);
-            cadastrarProdutosNavbar.Text = "Cadastrar Produtos";
-            cadastrarProdutosNavbar.Click += cadastrarPedidosToolStripMenuItem_Click;
-            // 
             // cadastrarPedidosNavbar
             // 
             cadastrarPedidosNavbar.Name = "cadastrarPedidosNavbar";
             cadastrarPedidosNavbar.Size = new Size(142, 24);
             cadastrarPedidosNavbar.Text = "Cadastrar Pedidos";
+            cadastrarPedidosNavbar.Click += cadastrarPedidosNavbar_Click;
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(14, 24);
+            // 
+            // cadastrarProdutosNavbar
+            // 
+            cadastrarProdutosNavbar.Name = "cadastrarProdutosNavbar";
+            cadastrarProdutosNavbar.Size = new Size(149, 24);
+            cadastrarProdutosNavbar.Text = "Cadastrar Produtos";
+            cadastrarProdutosNavbar.Click += cadastrarProdutosNavbar_Click;
             // 
             // homePage
             // 
@@ -107,7 +114,8 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem cadastrarUsuarioNavbar;
         private ToolStripMenuItem cadastrarClientesNavbar;
-        private ToolStripMenuItem cadastrarProdutosNavbar;
         private ToolStripMenuItem cadastrarPedidosNavbar;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem cadastrarProdutosNavbar;
     }
 }
