@@ -71,6 +71,7 @@
             cadastrarClientesNavbar.Name = "cadastrarClientesNavbar";
             cadastrarClientesNavbar.Size = new Size(142, 24);
             cadastrarClientesNavbar.Text = "Cadastrar Clientes";
+            cadastrarClientesNavbar.Click += cadastrarClientesNavbar_Click;
             // 
             // cadastrarPedidosNavbar
             // 
