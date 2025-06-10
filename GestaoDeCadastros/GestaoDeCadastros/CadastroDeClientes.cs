@@ -13,6 +13,12 @@ namespace GestaoDeCadastros
 {
     public partial class CadastroDeClientes : Form
     {
+        public string cep = "";
+        public string logradouro = "";
+        public string bairro = "";
+        public string cidade = "";
+        public string estado = "";
+           
         public CadastroDeClientes()
         {
             InitializeComponent();
@@ -34,10 +40,10 @@ namespace GestaoDeCadastros
                     var root = doc.RootElement;
 
 
-                    string logradouro = root.GetProperty("logradouro").GetString();
-                    string bairro = root.GetProperty("bairro").GetString();
-                    string cidade = root.GetProperty("localidade").GetString();
-                    string estado = root.GetProperty("uf").GetString();
+                    logradouro = root.GetProperty("logradouro").GetString();
+                    bairro = root.GetProperty("bairro").GetString();
+                    cidade = root.GetProperty("localidade").GetString();
+                    estado = root.GetProperty("uf").GetString();
 
                     MessageBox.Show(
                         $"Logradouro: {logradouro}\nBairro: {bairro}\nCidade: {cidade}\nEstado: {estado}",
@@ -54,6 +60,7 @@ namespace GestaoDeCadastros
         {
             string cep = txt_cep.Text.Trim();
             await BuscarCepViaCepAsync(cep);
+            MessageBox.Show(logradouro);
 
         }
 
