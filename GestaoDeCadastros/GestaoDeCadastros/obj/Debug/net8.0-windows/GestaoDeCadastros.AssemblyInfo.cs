@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestaoDeCadastros")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a45ea5f3cf24ac2bd5e49e445921ccb695f156b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba1b428475ee003f5d73f970b21549a78bf43876")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestaoDeCadastros")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestaoDeCadastros")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
