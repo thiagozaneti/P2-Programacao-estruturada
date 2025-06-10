@@ -56,5 +56,10 @@ namespace GestaoDeCadastros
             await BuscarCepViaCepAsync(cep);
 
         }
+
+        private void btn_buscar_cep_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

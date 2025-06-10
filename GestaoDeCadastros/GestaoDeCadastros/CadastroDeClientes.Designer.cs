@@ -53,6 +53,7 @@
             label12 = new Label();
             btn_cadastrar_cliente = new Button();
             dataGridView1 = new DataGridView();
+            btn_buscar_cep = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -166,7 +167,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(264, 125);
+            label8.Location = new Point(264, 152);
             label8.Name = "label8";
             label8.Size = new Size(87, 20);
             label8.TabIndex = 25;
@@ -175,7 +176,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(264, 182);
+            label9.Location = new Point(264, 206);
             label9.Name = "label9";
             label9.Size = new Size(63, 20);
             label9.TabIndex = 26;
@@ -184,7 +185,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(264, 245);
+            label10.Location = new Point(264, 264);
             label10.Name = "label10";
             label10.Size = new Size(49, 20);
             label10.TabIndex = 27;
@@ -193,7 +194,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(264, 298);
+            label11.Location = new Point(264, 317);
             label11.Name = "label11";
             label11.Size = new Size(56, 20);
             label11.TabIndex = 28;
@@ -201,35 +202,35 @@
             // 
             // txt_logradouro
             // 
-            txt_logradouro.Location = new Point(264, 152);
+            txt_logradouro.Location = new Point(264, 175);
             txt_logradouro.Name = "txt_logradouro";
             txt_logradouro.Size = new Size(194, 27);
             txt_logradouro.TabIndex = 29;
             // 
             // txt_numero
             // 
-            txt_numero.Location = new Point(264, 205);
+            txt_numero.Location = new Point(264, 234);
             txt_numero.Name = "txt_numero";
             txt_numero.Size = new Size(194, 27);
             txt_numero.TabIndex = 30;
             // 
             // txt_bairro
             // 
-            txt_bairro.Location = new Point(264, 268);
+            txt_bairro.Location = new Point(264, 287);
             txt_bairro.Name = "txt_bairro";
             txt_bairro.Size = new Size(194, 27);
             txt_bairro.TabIndex = 31;
             // 
             // txt_cidade
             // 
-            txt_cidade.Location = new Point(264, 321);
+            txt_cidade.Location = new Point(264, 340);
             txt_cidade.Name = "txt_cidade";
             txt_cidade.Size = new Size(194, 27);
             txt_cidade.TabIndex = 32;
             // 
             // txt_estado
             // 
-            txt_estado.Location = new Point(264, 383);
+            txt_estado.Location = new Point(264, 401);
             txt_estado.Name = "txt_estado";
             txt_estado.Size = new Size(194, 27);
             txt_estado.TabIndex = 34;
@@ -237,7 +238,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(264, 360);
+            label12.Location = new Point(264, 378);
             label12.Name = "label12";
             label12.Size = new Size(54, 20);
             label12.TabIndex = 33;
@@ -262,11 +263,22 @@
             dataGridView1.Size = new Size(787, 402);
             dataGridView1.TabIndex = 36;
             // 
+            // btn_buscar_cep
+            // 
+            btn_buscar_cep.Location = new Point(264, 121);
+            btn_buscar_cep.Name = "btn_buscar_cep";
+            btn_buscar_cep.Size = new Size(94, 24);
+            btn_buscar_cep.TabIndex = 37;
+            btn_buscar_cep.Text = "Buscar CEP";
+            btn_buscar_cep.UseVisualStyleBackColor = true;
+            btn_buscar_cep.Click += btn_buscar_cep_Click;
+            // 
             // CadastroDeClientes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1287, 457);
+            Controls.Add(btn_buscar_cep);
             Controls.Add(dataGridView1);
             Controls.Add(btn_cadastrar_cliente);
             Controls.Add(txt_estado);
@@ -326,5 +338,6 @@
         private Label label12;
         private Button btn_cadastrar_cliente;
         private DataGridView dataGridView1;
+        private Button btn_buscar_cep;
     }
 }
