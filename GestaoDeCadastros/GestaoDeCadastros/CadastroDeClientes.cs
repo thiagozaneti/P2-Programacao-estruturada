@@ -74,8 +74,13 @@ namespace GestaoDeCadastros
             {
                 MessageBox.Show("Por favor, preencha os campos de telefone e whatsapp");
             }
+            if(string.IsNullOrEmpty(txt_cep.Text) && string.IsNullOrEmpty(txt_logradouro.Text) && string.IsNullOrEmpty(txt_numero.Text)
+                && string.IsNullOrEmpty(txt_bairro.Text) && string.IsNullOrEmpty(txt_cidade.Text) && string.IsNullOrEmpty(txt_estado.Text)){
+                MessageBox.Show("Por favor, insira os campos de endereço");
+            }
+            
 
-
+            //fim das verificações
 
         }
 
