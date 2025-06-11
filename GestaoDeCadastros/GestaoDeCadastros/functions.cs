@@ -353,5 +353,33 @@ namespace GestaoDeCadastros
             return dt;
         }
 
+        public static void RemoverCliente(string usuario)
+        {
+            //verificação se o arquivo não existe
+            if (!File.Exists(caminhoArquivoCsvClientes))
+                CriarArquivosSeNaoExistir();
+            //armazenar o conteúdo do arquivo em uma lista
+            var linhas = File.ReadAllLines(caminhoArquivoCsvClientes).ToList();
+
+            // Pular a primeira linha (cabeçalho) e regravar o arquivo
+            using (StreamWriter sw = new StreamWriter(caminhoArquivoCsvClientes))
+            {
+                // Verifica se a lista não está vazia
+                sw.WriteLine(linhas[0]); // Cabeçalho
+
+                // Percorre as linhas a partir da segunda linha 
+                foreach (var linha in linhas.Skip(1))
+                {
+                    // Divide a linha em partes 
+                    string[] partes = linha.Split(',');
+                    // Verifica se a linha contém pelo menos duas partes e se o usuário não é o que está sendo removido
+                    if (partes.Length >= 2 && partes[0].Trim() != usuario.Trim())
+                    {
+                        sw.WriteLine(linha);
+                    }
+                }
+            }
+        }
+
     }
 }
