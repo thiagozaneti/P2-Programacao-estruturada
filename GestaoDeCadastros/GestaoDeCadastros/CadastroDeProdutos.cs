@@ -68,7 +68,7 @@ namespace GestaoDeCadastros
                     // Atualiza o DataGridView
                     dataGridView_Produto.DataSource = functions.LerDatabaseProduto();
                 }
-            }
+            } 
             else
             {
                 MessageBox.Show("Selecione um usuário para excluir.");

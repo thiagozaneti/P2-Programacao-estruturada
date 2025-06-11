@@ -54,6 +54,7 @@
             btn_cadastrar_cliente = new Button();
             dataGridView_cliente = new DataGridView();
             btn_buscar_cep = new Button();
+            btn_Excluir_Cliente = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_cliente).BeginInit();
             SuspendLayout();
             // 
@@ -69,7 +70,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(27, 69);
+            label2.Location = new Point(27, 85);
             label2.Name = "label2";
             label2.Size = new Size(50, 20);
             label2.TabIndex = 13;
@@ -78,7 +79,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(27, 125);
+            label3.Location = new Point(27, 141);
             label3.Name = "label3";
             label3.Size = new Size(33, 20);
             label3.TabIndex = 14;
@@ -87,7 +88,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(27, 182);
+            label4.Location = new Point(27, 198);
             label4.Name = "label4";
             label4.Size = new Size(46, 20);
             label4.TabIndex = 15;
@@ -96,7 +97,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(264, 69);
+            label5.Location = new Point(264, 85);
             label5.Name = "label5";
             label5.Size = new Size(34, 20);
             label5.TabIndex = 16;
@@ -105,7 +106,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(27, 245);
+            label6.Location = new Point(27, 261);
             label6.Name = "label6";
             label6.Size = new Size(66, 20);
             label6.TabIndex = 17;
@@ -114,7 +115,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(27, 317);
+            label7.Location = new Point(27, 333);
             label7.Name = "label7";
             label7.Size = new Size(78, 20);
             label7.TabIndex = 18;
@@ -122,35 +123,35 @@
             // 
             // txt_nome_cliente
             // 
-            txt_nome_cliente.Location = new Point(27, 92);
+            txt_nome_cliente.Location = new Point(27, 108);
             txt_nome_cliente.Name = "txt_nome_cliente";
             txt_nome_cliente.Size = new Size(194, 27);
             txt_nome_cliente.TabIndex = 19;
             // 
             // txt_cpf_cliente
             // 
-            txt_cpf_cliente.Location = new Point(27, 152);
+            txt_cpf_cliente.Location = new Point(27, 168);
             txt_cpf_cliente.Name = "txt_cpf_cliente";
             txt_cpf_cliente.Size = new Size(194, 27);
             txt_cpf_cliente.TabIndex = 20;
             // 
             // txt_email_cliente
             // 
-            txt_email_cliente.Location = new Point(27, 206);
+            txt_email_cliente.Location = new Point(27, 222);
             txt_email_cliente.Name = "txt_email_cliente";
             txt_email_cliente.Size = new Size(194, 27);
             txt_email_cliente.TabIndex = 21;
             // 
             // txt_cep
             // 
-            txt_cep.Location = new Point(264, 92);
+            txt_cep.Location = new Point(264, 108);
             txt_cep.Name = "txt_cep";
             txt_cep.Size = new Size(194, 27);
             txt_cep.TabIndex = 22;
             // 
             // txt_telefone
             // 
-            txt_telefone.Location = new Point(27, 268);
+            txt_telefone.Location = new Point(27, 284);
             txt_telefone.Mask = "00-00000-0000";
             txt_telefone.Name = "txt_telefone";
             txt_telefone.Size = new Size(194, 27);
@@ -158,7 +159,7 @@
             // 
             // txt_whatsapp
             // 
-            txt_whatsapp.Location = new Point(27, 340);
+            txt_whatsapp.Location = new Point(27, 356);
             txt_whatsapp.Mask = "00-00000-0000";
             txt_whatsapp.Name = "txt_whatsapp";
             txt_whatsapp.Size = new Size(194, 27);
@@ -167,7 +168,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(264, 152);
+            label8.Location = new Point(264, 168);
             label8.Name = "label8";
             label8.Size = new Size(87, 20);
             label8.TabIndex = 25;
@@ -176,7 +177,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(264, 206);
+            label9.Location = new Point(264, 222);
             label9.Name = "label9";
             label9.Size = new Size(63, 20);
             label9.TabIndex = 26;
@@ -185,7 +186,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(264, 264);
+            label10.Location = new Point(264, 280);
             label10.Name = "label10";
             label10.Size = new Size(49, 20);
             label10.TabIndex = 27;
@@ -194,7 +195,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(264, 317);
+            label11.Location = new Point(264, 333);
             label11.Name = "label11";
             label11.Size = new Size(56, 20);
             label11.TabIndex = 28;
@@ -202,35 +203,35 @@
             // 
             // txt_logradouro
             // 
-            txt_logradouro.Location = new Point(264, 175);
+            txt_logradouro.Location = new Point(264, 191);
             txt_logradouro.Name = "txt_logradouro";
             txt_logradouro.Size = new Size(194, 27);
             txt_logradouro.TabIndex = 29;
             // 
             // txt_numero
             // 
-            txt_numero.Location = new Point(264, 234);
+            txt_numero.Location = new Point(264, 250);
             txt_numero.Name = "txt_numero";
             txt_numero.Size = new Size(194, 27);
             txt_numero.TabIndex = 30;
             // 
             // txt_bairro
             // 
-            txt_bairro.Location = new Point(264, 287);
+            txt_bairro.Location = new Point(264, 303);
             txt_bairro.Name = "txt_bairro";
             txt_bairro.Size = new Size(194, 27);
             txt_bairro.TabIndex = 31;
             // 
             // txt_cidade
             // 
-            txt_cidade.Location = new Point(264, 340);
+            txt_cidade.Location = new Point(264, 356);
             txt_cidade.Name = "txt_cidade";
             txt_cidade.Size = new Size(194, 27);
             txt_cidade.TabIndex = 32;
             // 
             // txt_estado
             // 
-            txt_estado.Location = new Point(264, 401);
+            txt_estado.Location = new Point(264, 417);
             txt_estado.Name = "txt_estado";
             txt_estado.Size = new Size(194, 27);
             txt_estado.TabIndex = 34;
@@ -238,7 +239,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(264, 378);
+            label12.Location = new Point(264, 394);
             label12.Name = "label12";
             label12.Size = new Size(54, 20);
             label12.TabIndex = 33;
@@ -246,7 +247,7 @@
             // 
             // btn_cadastrar_cliente
             // 
-            btn_cadastrar_cliente.Location = new Point(31, 383);
+            btn_cadastrar_cliente.Location = new Point(31, 399);
             btn_cadastrar_cliente.Name = "btn_cadastrar_cliente";
             btn_cadastrar_cliente.Size = new Size(194, 44);
             btn_cadastrar_cliente.TabIndex = 35;
@@ -257,7 +258,7 @@
             // dataGridView_cliente
             // 
             dataGridView_cliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_cliente.Location = new Point(488, 26);
+            dataGridView_cliente.Location = new Point(488, 58);
             dataGridView_cliente.Name = "dataGridView_cliente";
             dataGridView_cliente.RowHeadersWidth = 51;
             dataGridView_cliente.Size = new Size(787, 402);
@@ -265,7 +266,7 @@
             // 
             // btn_buscar_cep
             // 
-            btn_buscar_cep.Location = new Point(264, 121);
+            btn_buscar_cep.Location = new Point(264, 137);
             btn_buscar_cep.Name = "btn_buscar_cep";
             btn_buscar_cep.Size = new Size(94, 24);
             btn_buscar_cep.TabIndex = 37;
@@ -273,11 +274,23 @@
             btn_buscar_cep.UseVisualStyleBackColor = true;
             btn_buscar_cep.Click += btn_buscar_cep_Click;
             // 
+            // btn_Excluir_Cliente
+            // 
+            btn_Excluir_Cliente.BackColor = Color.Red;
+            btn_Excluir_Cliente.Location = new Point(488, 20);
+            btn_Excluir_Cliente.Name = "btn_Excluir_Cliente";
+            btn_Excluir_Cliente.Size = new Size(117, 32);
+            btn_Excluir_Cliente.TabIndex = 38;
+            btn_Excluir_Cliente.Text = "Excluir";
+            btn_Excluir_Cliente.UseVisualStyleBackColor = false;
+            btn_Excluir_Cliente.Click += btn_Excluir_Cliente_Click;
+            // 
             // CadastroDeClientes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1287, 457);
+            ClientSize = new Size(1287, 472);
+            Controls.Add(btn_Excluir_Cliente);
             Controls.Add(btn_buscar_cep);
             Controls.Add(dataGridView_cliente);
             Controls.Add(btn_cadastrar_cliente);
@@ -340,5 +353,6 @@
         private Button btn_cadastrar_cliente;
         private DataGridView dataGridView_cliente;
         private Button btn_buscar_cep;
+        private Button btn_Excluir_Cliente;
     }
 }

@@ -135,5 +135,10 @@ namespace GestaoDeCadastros
         {
             dataGridView_cliente.DataSource = functions.LerDatabaseClientes();
         }
+
+        private void btn_Excluir_Cliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
