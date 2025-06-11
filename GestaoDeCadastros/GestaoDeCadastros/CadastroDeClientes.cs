@@ -66,7 +66,10 @@ namespace GestaoDeCadastros
             {
                 MessageBox.Show("Por favor, insira um CPF válido");
             }
-            
+            if (string.IsNullOrEmpty(txt_email_cliente.Text))
+            {
+                MessageBox.Show("Por favor, insira um Email válido");
+            }
         }
 
         private async void btn_buscar_cep_Click(object sender, EventArgs e)
