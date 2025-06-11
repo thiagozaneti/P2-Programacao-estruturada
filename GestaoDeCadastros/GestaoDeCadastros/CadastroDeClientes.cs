@@ -22,6 +22,7 @@ namespace GestaoDeCadastros
         public CadastroDeClientes()
         {
             InitializeComponent();
+
         }
         private static readonly HttpClient client = new HttpClient();
 
@@ -74,8 +75,9 @@ namespace GestaoDeCadastros
             {
                 MessageBox.Show("Por favor, preencha os campos de telefone e whatsapp");
             }
-            if(string.IsNullOrEmpty(txt_cep.Text) && string.IsNullOrEmpty(txt_logradouro.Text) && string.IsNullOrEmpty(txt_numero.Text)
-                && string.IsNullOrEmpty(txt_bairro.Text) && string.IsNullOrEmpty(txt_cidade.Text) && string.IsNullOrEmpty(txt_estado.Text)){
+            if (string.IsNullOrEmpty(txt_cep.Text) && string.IsNullOrEmpty(txt_logradouro.Text) && string.IsNullOrEmpty(txt_numero.Text)
+                && string.IsNullOrEmpty(txt_bairro.Text) && string.IsNullOrEmpty(txt_cidade.Text) && string.IsNullOrEmpty(txt_estado.Text))
+            {
                 MessageBox.Show("Por favor, insira os campos de endereço");
             }
 
@@ -106,7 +108,10 @@ namespace GestaoDeCadastros
             txt_cep.Clear();
             txt_telefone.Clear();
             txt_whatsapp.Clear();
-            
+
+            //atualizar data grid view 
+            dataGridView_cliente.DataSource = functions.LerDatabaseClientes();
+
 
         }
 
@@ -126,5 +131,9 @@ namespace GestaoDeCadastros
             }
         }
 
+        private void CadastroDeClientes_Load(object sender, EventArgs e)
+        {
+            dataGridView_cliente.DataSource = functions.LerDatabaseClientes();
+        }
     }
 }

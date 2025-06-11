@@ -52,9 +52,9 @@
             txt_estado = new TextBox();
             label12 = new Label();
             btn_cadastrar_cliente = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridView_cliente = new DataGridView();
             btn_buscar_cep = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_cliente).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -254,14 +254,14 @@
             btn_cadastrar_cliente.UseVisualStyleBackColor = true;
             btn_cadastrar_cliente.Click += btn_cadastrar_cliente_Click;
             // 
-            // dataGridView1
+            // dataGridView_cliente
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(488, 26);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(787, 402);
-            dataGridView1.TabIndex = 36;
+            dataGridView_cliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_cliente.Location = new Point(488, 26);
+            dataGridView_cliente.Name = "dataGridView_cliente";
+            dataGridView_cliente.RowHeadersWidth = 51;
+            dataGridView_cliente.Size = new Size(787, 402);
+            dataGridView_cliente.TabIndex = 36;
             // 
             // btn_buscar_cep
             // 
@@ -279,7 +279,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1287, 457);
             Controls.Add(btn_buscar_cep);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridView_cliente);
             Controls.Add(btn_cadastrar_cliente);
             Controls.Add(txt_estado);
             Controls.Add(label12);
@@ -306,7 +306,8 @@
             Controls.Add(label1);
             Name = "CadastroDeClientes";
             Text = "CadastroDeClientes";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += CadastroDeClientes_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView_cliente).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -337,7 +338,7 @@
         private TextBox txt_estado;
         private Label label12;
         private Button btn_cadastrar_cliente;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridView_cliente;
         private Button btn_buscar_cep;
     }
 }
