@@ -138,7 +138,26 @@ namespace GestaoDeCadastros
 
         private void btn_Excluir_Cliente_Click(object sender, EventArgs e)
         {
-
+            // Verifica se existe alguma linha selecionada
+            if (dataGridView_cliente.SelectedRows.Count > 0)
+            {
+                // Obtém o nome do Cliente da primeira célula da linha selecionada
+                string cliente = dataGridView_cliente.SelectedRows[0].Cells[0].Value?.ToString();
+                // Não permitir excluir o ADMIN
+                // Confirma exclusão
+                var confirm = MessageBox.Show($"Tem certeza que deseja excluir o Clinete  '{cliente}'?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                {
+                    functions.RemoverProduto(cliente);
+                    MessageBox.Show("Cliente excluído com sucesso!");
+                    // Atualiza o DataGridView
+                    dataGridView_cliente.DataSource = functions.LerDatabaseClientes();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um Cliente para excluir.");
+            }
         }
     }
 }
