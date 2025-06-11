@@ -70,6 +70,13 @@ namespace GestaoDeCadastros
             {
                 MessageBox.Show("Por favor, insira um Email válido");
             }
+            if (string.IsNullOrEmpty(txt_telefone.Text) && string.IsNullOrEmpty(txt_whatsapp.Text))
+            {
+                MessageBox.Show("Por favor, preencha os campos de telefone e whatsapp");
+            }
+
+
+
         }
 
         private async void btn_buscar_cep_Click(object sender, EventArgs e)
