@@ -290,5 +290,27 @@ namespace GestaoDeCadastros
             }
         }
 
+
+        //-----------------------------//
+
+
+
+
+        //Crud Clientes
+        public static void AdicionarCliente(string Nome, string cpf, string email, string telefone, string whatsapp, string cep,
+            string logradouro, string numero, string bairro, string cidade, string estado)
+        {
+            // Verifica se o arquivo existe
+            if (!File.Exists(caminhoArquivoCsvClientes))
+            {
+                CriarArquivosSeNaoExistir();
+            }
+            using (StreamWriter sw = new StreamWriter(caminhoArquivoCsvClientes, true))
+            {
+                // Adiciona o novo usuário ao arquivo CSV
+                sw.WriteLine($"{Nome}, {cpf}, {email}, {telefone},`{whatsapp}, {cep}, {logradouro},`{numero}, {bairro}, {cidade}, {estado}");
+            }
+        }
+
     }
 }
