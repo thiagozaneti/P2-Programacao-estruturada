@@ -312,5 +312,46 @@ namespace GestaoDeCadastros
             }
         }
 
+
+        //função para leitura de banco de dados para mostrar no data grid view
+        public static DataTable LerDatabaseClientes()
+        {
+            DataTable dt = new DataTable();
+
+            if (!File.Exists(caminhoArquivoCsvClientes)) return dt;
+
+            using (StreamReader sr = new StreamReader(caminhoArquivoCsvClientes))
+            {
+                string linha;
+                bool primeiraLinha = true;
+                int numeroColunas = 0;
+
+                while ((linha = sr.ReadLine()) != null)
+                {
+                    // Ignora linhas em branco
+                    if (string.IsNullOrWhiteSpace(linha))
+                        continue;
+
+                    string[] campos = linha.Split(',');
+
+                    if (primeiraLinha)
+                    {
+                        foreach (string col in campos)
+                            dt.Columns.Add(col.Trim());
+                        numeroColunas = dt.Columns.Count;
+                        primeiraLinha = false;
+                    }
+                    else
+                    {
+                        // Só adiciona se a quantidade de campos for igual ao número de colunas
+                        if (campos.Length == numeroColunas)
+                            dt.Rows.Add(campos.Select(c => c.Trim()).ToArray());
+                    }
+                }
+            }
+
+            return dt;
+        }
+
     }
 }

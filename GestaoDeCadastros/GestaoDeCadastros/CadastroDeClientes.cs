@@ -78,6 +78,8 @@ namespace GestaoDeCadastros
                 && string.IsNullOrEmpty(txt_bairro.Text) && string.IsNullOrEmpty(txt_cidade.Text) && string.IsNullOrEmpty(txt_estado.Text)){
                 MessageBox.Show("Por favor, insira os campos de endereço");
             }
+
+            //fim das verificações
             functions.AdicionarCliente(Nome: txt_nome_cliente.Text.Trim(),
                 cpf: txt_cpf_cliente.Text.Trim(),
                 email: txt_email_cliente.Text.Trim(),
@@ -90,8 +92,6 @@ namespace GestaoDeCadastros
                 cidade: txt_cidade.Text.Trim(),
                 estado: txt_estado.Text.Trim());
             MessageBox.Show("Cliente cadastrado com sucesso");
-
-            //fim das verificações
 
         }
 
