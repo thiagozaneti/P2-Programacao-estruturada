@@ -78,7 +78,18 @@ namespace GestaoDeCadastros
                 && string.IsNullOrEmpty(txt_bairro.Text) && string.IsNullOrEmpty(txt_cidade.Text) && string.IsNullOrEmpty(txt_estado.Text)){
                 MessageBox.Show("Por favor, insira os campos de endereço");
             }
-            
+            functions.AdicionarCliente(Nome: txt_nome_cliente.Text.Trim(),
+                cpf: txt_cpf_cliente.Text.Trim(),
+                email: txt_email_cliente.Text.Trim(),
+                telefone: txt_telefone.Text.Trim(),
+                whatsapp: txt_whatsapp.Text.Trim(),
+                cep: txt_cep.Text.Trim(),
+                logradouro: txt_logradouro.Text.Trim(),
+                numero: txt_numero.Text.Trim(),
+                bairro: txt_bairro.Text.Trim(),
+                cidade: txt_cidade.Text.Trim(),
+                estado: txt_estado.Text.Trim());
+            MessageBox.Show("Cliente cadastrado com sucesso");
 
             //fim das verificações
 
