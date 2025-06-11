@@ -58,7 +58,10 @@ namespace GestaoDeCadastros
 
         private async void btn_cadastrar_cliente_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(txt_nome_cliente.Text) || txt_nome_cliente.TextLength < 3)
+            {
+                MessageBox.Show("Por favor, insira um Nome válido ou maior que três caracteres");
+            }
         }
 
         private async void btn_buscar_cep_Click(object sender, EventArgs e)
