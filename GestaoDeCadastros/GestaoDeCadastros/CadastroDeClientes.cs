@@ -62,6 +62,11 @@ namespace GestaoDeCadastros
             {
                 MessageBox.Show("Por favor, insira um Nome válido ou maior que três caracteres");
             }
+            if (string.IsNullOrEmpty(txt_cpf_cliente.Text) || txt_cpf_cliente.TextLength < 11)
+            {
+                MessageBox.Show("Por favor, insira um CPF válido");
+            }
+            
         }
 
         private async void btn_buscar_cep_Click(object sender, EventArgs e)
