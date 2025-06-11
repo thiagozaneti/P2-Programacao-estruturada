@@ -93,6 +93,21 @@ namespace GestaoDeCadastros
                 estado: txt_estado.Text.Trim());
             MessageBox.Show("Cliente cadastrado com sucesso");
 
+
+            // Limpar os campos após o cadastro
+            txt_nome_cliente.Clear();
+            txt_cpf_cliente.Clear();
+            txt_email_cliente.Clear();
+            txt_bairro.Clear();
+            txt_cidade.Clear();
+            txt_estado.Clear();
+            txt_logradouro.Clear();
+            txt_numero.Clear();
+            txt_cep.Clear();
+            txt_telefone.Clear();
+            txt_whatsapp.Clear();
+            
+
         }
 
         private async void btn_buscar_cep_Click(object sender, EventArgs e)
