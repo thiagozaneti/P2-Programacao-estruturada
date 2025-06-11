@@ -18,7 +18,7 @@ namespace GestaoDeCadastros
         public string bairro = "";
         public string cidade = "";
         public string estado = "";
-           
+
         public CadastroDeClientes()
         {
             InitializeComponent();
@@ -58,15 +58,24 @@ namespace GestaoDeCadastros
 
         private async void btn_cadastrar_cliente_Click(object sender, EventArgs e)
         {
-            string cep = txt_cep.Text.Trim();
-            await BuscarCepViaCepAsync(cep);
-            MessageBox.Show(logradouro);
 
         }
 
-        private void btn_buscar_cep_Click(object sender, EventArgs e)
+        private async void btn_buscar_cep_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(txt_cep.Text))
+            {
+                MessageBox.Show("Por favor, insira um CEP válido.");
+            }
+            else
+            {
+                await BuscarCepViaCepAsync(txt_cep.Text.Trim());
+                txt_bairro.Text = bairro;
+                txt_cidade.Text = cidade;
+                txt_estado.Text = estado;
+                txt_logradouro.Text = logradouro;
+            }
         }
+
     }
 }
