@@ -152,6 +152,7 @@ namespace GestaoDeCadastros
                     MessageBox.Show("Cliente excluído com sucesso!");
                     // Atualiza o DataGridView
                     dataGridView_cliente.DataSource = functions.LerDatabaseClientes();
+                    
                 }
             }
             else

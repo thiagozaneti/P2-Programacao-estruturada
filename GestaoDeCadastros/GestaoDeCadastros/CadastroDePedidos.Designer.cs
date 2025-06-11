@@ -38,11 +38,11 @@
             label5 = new Label();
             comboBox_produtos = new ComboBox();
             btn_adicionar_pedido = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridView_Pedidos = new DataGridView();
             label6 = new Label();
             lbl_total_Pedido = new Label();
             lbl_cliente = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Pedidos).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -130,14 +130,14 @@
             btn_adicionar_pedido.Text = "Adicionar Pedido";
             btn_adicionar_pedido.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridView_Pedidos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 168);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(755, 257);
-            dataGridView1.TabIndex = 22;
+            dataGridView_Pedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_Pedidos.Location = new Point(33, 168);
+            dataGridView_Pedidos.Name = "dataGridView_Pedidos";
+            dataGridView_Pedidos.RowHeadersWidth = 51;
+            dataGridView_Pedidos.Size = new Size(755, 257);
+            dataGridView_Pedidos.TabIndex = 22;
             // 
             // label6
             // 
@@ -174,7 +174,7 @@
             Controls.Add(lbl_cliente);
             Controls.Add(lbl_total_Pedido);
             Controls.Add(label6);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridView_Pedidos);
             Controls.Add(btn_adicionar_pedido);
             Controls.Add(comboBox_produtos);
             Controls.Add(label5);
@@ -187,7 +187,7 @@
             Controls.Add(label1);
             Name = "CadastroDePedidos";
             Text = "CadastroDePedidos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Pedidos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -204,7 +204,7 @@
         private Label label5;
         private ComboBox comboBox_produtos;
         private Button btn_adicionar_pedido;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridView_Pedidos;
         private Label label6;
         private Label lbl_total_Pedido;
         private Label lbl_cliente;

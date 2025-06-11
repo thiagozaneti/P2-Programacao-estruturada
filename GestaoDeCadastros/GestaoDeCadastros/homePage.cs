@@ -17,6 +17,7 @@ namespace GestaoDeCadastros
         CadastroDeUsuarios paginaDeCadastroDeUsuario = new CadastroDeUsuarios();
         CadastroDeProdutos paginaDeCadastroDeProdutos = new CadastroDeProdutos();
         CadastroDeClientes paginaDeCadastroDeClientes = new CadastroDeClientes();
+        CadastroDePedidos paginaDeCadastroDePedidos = new CadastroDePedidos();
         public string userNameInHomepage = "";
 
         public homePage()
@@ -42,7 +43,7 @@ namespace GestaoDeCadastros
 
         private void cadastrarPedidosNavbar_Click(object sender, EventArgs e)
         {
-
+            paginaDeCadastroDePedidos.ShowDialog(); //exibindo a pagina de cadastro de pedidos
         }
 
         private void cadastrarProdutosNavbar_Click(object sender, EventArgs e)
