@@ -87,7 +87,7 @@ namespace GestaoDeCadastros
                 if (confirm == DialogResult.Yes)
                 {
                     functions.RemoverUsuario(usuario);
-                    MessageBox.Show("Usuário excluído com sucesso!");
+                    MessageBox.Show("Usuário excluído com sucesso");
                     // Atualiza o DataGridView
                     dataGridView_Admin.DataSource = functions.LerDatabaseUsuario();
                 }
@@ -114,8 +114,19 @@ namespace GestaoDeCadastros
 
             if (string.IsNullOrEmpty(novaSenha))
             {
-                MessageBox.Show("Digite a nova senha!");
+                MessageBox.Show("Digite a nova senha");
                 return;
+            }
+            bool alterado = functions.AlterarSenhaUsuarioLogado(novaSenha);
+
+            if (alterado)
+            {
+                MessageBox.Show("Senha alterada com sucesso");
+                txt_alterar_senha_usuario_comum.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao alterar senha. Usuário não está logado ou não encontrado.");
             }
         }
     }
