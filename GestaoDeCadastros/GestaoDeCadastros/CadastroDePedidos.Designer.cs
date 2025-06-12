@@ -42,6 +42,11 @@
             label6 = new Label();
             lbl_total_Pedido = new Label();
             lbl_cliente = new Label();
+            btn_gravar_pedido = new Button();
+            CPF = new DataGridViewTextBoxColumn();
+            Produto = new DataGridViewTextBoxColumn();
+            Quantidade = new DataGridViewTextBoxColumn();
+            Valor = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Pedidos).BeginInit();
             SuspendLayout();
             // 
@@ -130,10 +135,12 @@
             btn_adicionar_pedido.TabIndex = 21;
             btn_adicionar_pedido.Text = "Adicionar Pedido";
             btn_adicionar_pedido.UseVisualStyleBackColor = true;
+            btn_adicionar_pedido.Click += btn_adicionar_pedido_Click;
             // 
             // dataGridView_Pedidos
             // 
             dataGridView_Pedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_Pedidos.Columns.AddRange(new DataGridViewColumn[] { CPF, Produto, Quantidade, Valor });
             dataGridView_Pedidos.Location = new Point(33, 168);
             dataGridView_Pedidos.Name = "dataGridView_Pedidos";
             dataGridView_Pedidos.RowHeadersWidth = 51;
@@ -143,7 +150,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(39, 456);
+            label6.Location = new Point(39, 442);
             label6.Name = "label6";
             label6.Size = new Size(119, 20);
             label6.TabIndex = 23;
@@ -152,7 +159,7 @@
             // lbl_total_Pedido
             // 
             lbl_total_Pedido.AutoSize = true;
-            lbl_total_Pedido.Location = new Point(164, 456);
+            lbl_total_Pedido.Location = new Point(164, 442);
             lbl_total_Pedido.Name = "lbl_total_Pedido";
             lbl_total_Pedido.Size = new Size(17, 20);
             lbl_total_Pedido.TabIndex = 24;
@@ -167,11 +174,54 @@
             lbl_cliente.TabIndex = 25;
             lbl_cliente.Text = "None";
             // 
+            // btn_gravar_pedido
+            // 
+            btn_gravar_pedido.Location = new Point(39, 468);
+            btn_gravar_pedido.Name = "btn_gravar_pedido";
+            btn_gravar_pedido.Size = new Size(194, 44);
+            btn_gravar_pedido.TabIndex = 26;
+            btn_gravar_pedido.Text = "Gravar Pedido";
+            btn_gravar_pedido.UseVisualStyleBackColor = true;
+            btn_gravar_pedido.Click += btn_gravar_pedido_Click;
+            // 
+            // CPF
+            // 
+            CPF.HeaderText = "CPF";
+            CPF.MinimumWidth = 6;
+            CPF.Name = "CPF";
+            CPF.ReadOnly = true;
+            CPF.Width = 125;
+            // 
+            // Produto
+            // 
+            Produto.HeaderText = "Produto";
+            Produto.MinimumWidth = 6;
+            Produto.Name = "Produto";
+            Produto.ReadOnly = true;
+            Produto.Width = 125;
+            // 
+            // Quantidade
+            // 
+            Quantidade.HeaderText = "Quantidade";
+            Quantidade.MinimumWidth = 6;
+            Quantidade.Name = "Quantidade";
+            Quantidade.ReadOnly = true;
+            Quantidade.Width = 125;
+            // 
+            // Valor
+            // 
+            Valor.HeaderText = "Valor";
+            Valor.MinimumWidth = 6;
+            Valor.Name = "Valor";
+            Valor.ReadOnly = true;
+            Valor.Width = 125;
+            // 
             // CadastroDePedidos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(819, 524);
+            Controls.Add(btn_gravar_pedido);
             Controls.Add(lbl_cliente);
             Controls.Add(lbl_total_Pedido);
             Controls.Add(label6);
@@ -188,6 +238,7 @@
             Controls.Add(label1);
             Name = "CadastroDePedidos";
             Text = "CadastroDePedidos";
+            Load += CadastroDePedidos_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_Pedidos).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -209,5 +260,10 @@
         private Label label6;
         private Label lbl_total_Pedido;
         private Label lbl_cliente;
+        private Button btn_gravar_pedido;
+        private DataGridViewTextBoxColumn CPF;
+        private DataGridViewTextBoxColumn Produto;
+        private DataGridViewTextBoxColumn Quantidade;
+        private DataGridViewTextBoxColumn Valor;
     }
 }

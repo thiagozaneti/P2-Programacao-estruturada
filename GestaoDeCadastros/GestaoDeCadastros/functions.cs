@@ -12,7 +12,7 @@ namespace GestaoDeCadastros
         public static string caminhoArquivoCsvUsuarios = @"C:\Users\Public\Documents\users.csv";
         public static string caminhoArquivoCsvClientes = @"C:\Users\Public\Documents\clients.csv";
         public static string caminhoArquivoCsvProdutos = @"C:\Users\Public\Documents\products.csv";
-        public static string caminhoArquivoCsvPedidos = @"C:\Users\Public\Documents\orders.txt";
+        public static string caminhoArquivoCsvPedidos = @"C:\Users\Public\Documents\orders.csv";
         public static string CaminhoUsuarioLogado = @"C:\Users\Public\Documents\usuario_logado.txt";
 
 
@@ -383,7 +383,7 @@ namespace GestaoDeCadastros
 
 
         //crud pedidos
-        public static void AdicionarPedido(string CPF, double produto, string quantidade, string valor)
+        public static void AdicionarPedido(string CPF, string produto, string quantidade, string valor)
         {
             // Verifica se o arquivo existe
             if (!File.Exists(caminhoArquivoCsvPedidos))
@@ -396,6 +396,25 @@ namespace GestaoDeCadastros
                 sw.WriteLine($"{CPF}, {produto}, {quantidade}, {valor}");
             }
         }
+        public static double CalcularTotalPedido(DataGridView dataGridView_Pedidos)
+        {
+            double soma = 0;
+            foreach (DataGridViewRow row in dataGridView_Pedidos.Rows)
+            {
+                if (row.IsNewRow) continue; // ignora linha de inserção
+                if (row.Cells[3].Value != null)
+                {
+                    double valor;
+                    if (double.TryParse(row.Cells[3].Value.ToString(), out valor))
+                    {
+                        soma += valor;
+                    }
+                }
+            }
+            return soma;
+        }
+
+
 
 
     }
