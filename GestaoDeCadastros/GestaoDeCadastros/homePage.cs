@@ -25,7 +25,8 @@ namespace GestaoDeCadastros
             InitializeComponent();
             
             this.WindowState = FormWindowState.Maximized;
-
+            dataGridView_pedidos.DataSource = functions.LerDatabasePedidos(); // Carrega os pedidos no DataGridView ao iniciar a homePage
+            dataGridView_produtos.DataSource = functions.LerDatabaseProduto(); 
         }
 
 

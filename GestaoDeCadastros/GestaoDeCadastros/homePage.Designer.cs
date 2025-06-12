@@ -35,14 +35,15 @@
             cadastrarPedidosNavbar = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             cadastrarProdutosNavbar = new ToolStripMenuItem();
-            dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
+            dataGridView_produtos = new DataGridView();
+            dataGridView_pedidos = new DataGridView();
             label1 = new Label();
             label2 = new Label();
             pesquisar_pedidos_navbar = new ToolStripMenuItem();
+            btn_Excluir_Pedidos = new Button();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_produtos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_pedidos).BeginInit();
             SuspendLayout();
             // 
             // lbl_userNameInHompage
@@ -99,25 +100,25 @@
             cadastrarProdutosNavbar.Text = "Cadastrar Produtos";
             cadastrarProdutosNavbar.Click += cadastrarProdutosNavbar_Click;
             // 
-            // dataGridView1
+            // dataGridView_produtos
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            dataGridView1.ColumnHeadersHeight = 29;
-            dataGridView1.Location = new Point(22, 132);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(869, 633);
-            dataGridView1.TabIndex = 2;
+            dataGridView_produtos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            dataGridView_produtos.ColumnHeadersHeight = 29;
+            dataGridView_produtos.Location = new Point(22, 132);
+            dataGridView_produtos.Name = "dataGridView_produtos";
+            dataGridView_produtos.RowHeadersWidth = 51;
+            dataGridView_produtos.Size = new Size(869, 633);
+            dataGridView_produtos.TabIndex = 2;
             // 
-            // dataGridView2
+            // dataGridView_pedidos
             // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            dataGridView2.ColumnHeadersHeight = 29;
-            dataGridView2.Location = new Point(937, 132);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(930, 633);
-            dataGridView2.TabIndex = 3;
+            dataGridView_pedidos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            dataGridView_pedidos.ColumnHeadersHeight = 29;
+            dataGridView_pedidos.Location = new Point(937, 132);
+            dataGridView_pedidos.Name = "dataGridView_pedidos";
+            dataGridView_pedidos.RowHeadersWidth = 51;
+            dataGridView_pedidos.Size = new Size(930, 633);
+            dataGridView_pedidos.TabIndex = 3;
             // 
             // label1
             // 
@@ -143,15 +144,26 @@
             pesquisar_pedidos_navbar.Size = new Size(140, 24);
             pesquisar_pedidos_navbar.Text = "Pesquisar Pedidos";
             // 
+            // btn_Excluir_Pedidos
+            // 
+            btn_Excluir_Pedidos.BackColor = Color.Red;
+            btn_Excluir_Pedidos.Location = new Point(1750, 87);
+            btn_Excluir_Pedidos.Name = "btn_Excluir_Pedidos";
+            btn_Excluir_Pedidos.Size = new Size(117, 32);
+            btn_Excluir_Pedidos.TabIndex = 22;
+            btn_Excluir_Pedidos.Text = "Excluir";
+            btn_Excluir_Pedidos.UseVisualStyleBackColor = false;
+            // 
             // homePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1902, 1033);
+            Controls.Add(btn_Excluir_Pedidos);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridView_pedidos);
+            Controls.Add(dataGridView_produtos);
             Controls.Add(lbl_userNameInHompage);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -161,8 +173,8 @@
             Load += homePage_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_produtos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_pedidos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -176,10 +188,11 @@
         private ToolStripMenuItem cadastrarPedidosNavbar;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem cadastrarProdutosNavbar;
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
+        private DataGridView dataGridView_produtos;
+        private DataGridView dataGridView_pedidos;
         private Label label1;
         private Label label2;
         private ToolStripMenuItem pesquisar_pedidos_navbar;
+        private Button btn_Excluir_Pedidos;
     }
 }
