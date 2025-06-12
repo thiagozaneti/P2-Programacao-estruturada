@@ -103,6 +103,7 @@
             btn_pesquisar_cpf.TabIndex = 18;
             btn_pesquisar_cpf.Text = "Pesquisar";
             btn_pesquisar_cpf.UseVisualStyleBackColor = true;
+            btn_pesquisar_cpf.Click += btn_pesquisar_cpf_Click;
             // 
             // label5
             // 
