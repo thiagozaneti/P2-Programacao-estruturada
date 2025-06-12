@@ -383,6 +383,19 @@ namespace GestaoDeCadastros
 
 
         //crud pedidos
+        public static void AdicionarPedido(string CPF, double produto, string quantidade, string valor)
+        {
+            // Verifica se o arquivo existe
+            if (!File.Exists(caminhoArquivoCsvPedidos))
+            {
+                CriarArquivosSeNaoExistir();
+            }
+            using (StreamWriter sw = new StreamWriter(caminhoArquivoCsvPedidos, true))
+            {
+                // Adiciona o novo pedido ao arquivo CSV
+                sw.WriteLine($"{CPF}, {produto}, {quantidade}, {valor}");
+            }
+        }
 
 
     }
