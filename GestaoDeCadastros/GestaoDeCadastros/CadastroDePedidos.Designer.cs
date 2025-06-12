@@ -39,14 +39,14 @@
             comboBox_produtos = new ComboBox();
             btn_adicionar_pedido = new Button();
             dataGridView_Pedidos = new DataGridView();
-            label6 = new Label();
-            lbl_total_Pedido = new Label();
-            lbl_cliente = new Label();
-            btn_gravar_pedido = new Button();
             CPF = new DataGridViewTextBoxColumn();
             Produto = new DataGridViewTextBoxColumn();
             Quantidade = new DataGridViewTextBoxColumn();
             Valor = new DataGridViewTextBoxColumn();
+            label6 = new Label();
+            lbl_total_Pedido = new Label();
+            lbl_cliente = new Label();
+            btn_gravar_pedido = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Pedidos).BeginInit();
             SuspendLayout();
             // 
@@ -147,6 +147,38 @@
             dataGridView_Pedidos.Size = new Size(755, 257);
             dataGridView_Pedidos.TabIndex = 22;
             // 
+            // CPF
+            // 
+            CPF.HeaderText = "CPF";
+            CPF.MinimumWidth = 6;
+            CPF.Name = "CPF";
+            CPF.ReadOnly = true;
+            CPF.Width = 125;
+            // 
+            // Produto
+            // 
+            Produto.HeaderText = "Produto";
+            Produto.MinimumWidth = 6;
+            Produto.Name = "Produto";
+            Produto.ReadOnly = true;
+            Produto.Width = 125;
+            // 
+            // Quantidade
+            // 
+            Quantidade.HeaderText = "Quantidade";
+            Quantidade.MinimumWidth = 6;
+            Quantidade.Name = "Quantidade";
+            Quantidade.ReadOnly = true;
+            Quantidade.Width = 125;
+            // 
+            // Valor
+            // 
+            Valor.HeaderText = "Valor";
+            Valor.MinimumWidth = 6;
+            Valor.Name = "Valor";
+            Valor.ReadOnly = true;
+            Valor.Width = 125;
+            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -184,38 +216,6 @@
             btn_gravar_pedido.UseVisualStyleBackColor = true;
             btn_gravar_pedido.Click += btn_gravar_pedido_Click;
             // 
-            // CPF
-            // 
-            CPF.HeaderText = "CPF";
-            CPF.MinimumWidth = 6;
-            CPF.Name = "CPF";
-            CPF.ReadOnly = true;
-            CPF.Width = 125;
-            // 
-            // Produto
-            // 
-            Produto.HeaderText = "Produto";
-            Produto.MinimumWidth = 6;
-            Produto.Name = "Produto";
-            Produto.ReadOnly = true;
-            Produto.Width = 125;
-            // 
-            // Quantidade
-            // 
-            Quantidade.HeaderText = "Quantidade";
-            Quantidade.MinimumWidth = 6;
-            Quantidade.Name = "Quantidade";
-            Quantidade.ReadOnly = true;
-            Quantidade.Width = 125;
-            // 
-            // Valor
-            // 
-            Valor.HeaderText = "Valor";
-            Valor.MinimumWidth = 6;
-            Valor.Name = "Valor";
-            Valor.ReadOnly = true;
-            Valor.Width = 125;
-            // 
             // CadastroDePedidos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -236,6 +236,8 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CadastroDePedidos";
             Text = "CadastroDePedidos";
             Load += CadastroDePedidos_Load;

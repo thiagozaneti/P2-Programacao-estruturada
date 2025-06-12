@@ -317,6 +317,8 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CadastroDeClientes";
             Text = "CadastroDeClientes";
             Load += CadastroDeClientes_Load;

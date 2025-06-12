@@ -101,6 +101,8 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "loginPage";
             Text = "loginPage";
             Load += loginPage_Load;
