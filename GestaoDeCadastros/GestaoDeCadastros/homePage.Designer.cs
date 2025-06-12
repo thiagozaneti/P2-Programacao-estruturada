@@ -39,6 +39,7 @@
             dataGridView2 = new DataGridView();
             label1 = new Label();
             label2 = new Label();
+            pesquisar_pedidos_navbar = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -58,7 +59,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrarUsuarioNavbar, cadastrarClientesNavbar, cadastrarPedidosNavbar, toolStripMenuItem1, cadastrarProdutosNavbar });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrarUsuarioNavbar, cadastrarClientesNavbar, cadastrarPedidosNavbar, toolStripMenuItem1, cadastrarProdutosNavbar, pesquisar_pedidos_navbar });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1902, 28);
@@ -136,6 +137,12 @@
             label2.TabIndex = 5;
             label2.Text = "Visualizar Pedidos";
             // 
+            // pesquisar_pedidos_navbar
+            // 
+            pesquisar_pedidos_navbar.Name = "pesquisar_pedidos_navbar";
+            pesquisar_pedidos_navbar.Size = new Size(140, 24);
+            pesquisar_pedidos_navbar.Text = "Pesquisar Pedidos";
+            // 
             // homePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -173,5 +180,6 @@
         private DataGridView dataGridView2;
         private Label label1;
         private Label label2;
+        private ToolStripMenuItem pesquisar_pedidos_navbar;
     }
 }
