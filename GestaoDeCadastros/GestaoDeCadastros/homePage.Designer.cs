@@ -35,7 +35,13 @@
             cadastrarPedidosNavbar = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             cadastrarProdutosNavbar = new ToolStripMenuItem();
+            dataGridView1 = new DataGridView();
+            dataGridView2 = new DataGridView();
+            label1 = new Label();
+            label2 = new Label();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // lbl_userNameInHompage
@@ -55,7 +61,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrarUsuarioNavbar, cadastrarClientesNavbar, cadastrarPedidosNavbar, toolStripMenuItem1, cadastrarProdutosNavbar });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Size = new Size(1902, 28);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -92,19 +98,64 @@
             cadastrarProdutosNavbar.Text = "Cadastrar Produtos";
             cadastrarProdutosNavbar.Click += cadastrarProdutosNavbar_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            dataGridView1.ColumnHeadersHeight = 29;
+            dataGridView1.Location = new Point(22, 132);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(869, 633);
+            dataGridView1.TabIndex = 2;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            dataGridView2.ColumnHeadersHeight = 29;
+            dataGridView2.Location = new Point(937, 132);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(930, 633);
+            dataGridView2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(22, 99);
+            label1.Name = "label1";
+            label1.Size = new Size(135, 20);
+            label1.TabIndex = 4;
+            label1.Text = "Visualizar Produtos";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(937, 99);
+            label2.Name = "label2";
+            label2.Size = new Size(128, 20);
+            label2.TabIndex = 5;
+            label2.Text = "Visualizar Pedidos";
+            // 
             // homePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1902, 1033);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(dataGridView2);
+            Controls.Add(dataGridView1);
             Controls.Add(lbl_userNameInHompage);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "homePage";
             Text = "homePage";
+            WindowState = FormWindowState.Maximized;
             Load += homePage_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -118,5 +169,9 @@
         private ToolStripMenuItem cadastrarPedidosNavbar;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem cadastrarProdutosNavbar;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
+        private Label label1;
+        private Label label2;
     }
 }

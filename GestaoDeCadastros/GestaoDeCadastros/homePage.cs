@@ -23,6 +23,9 @@ namespace GestaoDeCadastros
         public homePage()
         {
             InitializeComponent();
+            
+            this.WindowState = FormWindowState.Maximized;
+
         }
 
 
