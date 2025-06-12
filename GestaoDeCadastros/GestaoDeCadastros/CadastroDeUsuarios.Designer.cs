@@ -89,6 +89,7 @@
             txt_alterar_senha_usuario_comum.Name = "txt_alterar_senha_usuario_comum";
             txt_alterar_senha_usuario_comum.Size = new Size(125, 27);
             txt_alterar_senha_usuario_comum.TabIndex = 5;
+            txt_alterar_senha_usuario_comum.TextChanged += txt_alterar_senha_usuario_comum_TextChanged;
             // 
             // lbl_aviso_de_usuario_comum
             // 
@@ -107,6 +108,7 @@
             btn_alterar_senha_usuario_comum.TabIndex = 7;
             btn_alterar_senha_usuario_comum.Text = "Alterar Senha";
             btn_alterar_senha_usuario_comum.UseVisualStyleBackColor = true;
+            btn_alterar_senha_usuario_comum.Click += btn_alterar_senha_usuario_comum_Click;
             // 
             // btn_cadastrar_novo_usuario
             // 

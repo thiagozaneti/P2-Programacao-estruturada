@@ -102,5 +102,15 @@ namespace GestaoDeCadastros
         {
 
         }
+
+        private void txt_alterar_senha_usuario_comum_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_alterar_senha_usuario_comum_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -106,6 +106,37 @@ namespace GestaoDeCadastros
                 File.Delete(CaminhoUsuarioLogado);
             }
         }
+        public static bool AlterarSenhaUsuarioLogado(string novaSenha)
+        {
+            string usuarioLogado = ObterUsuarioLogado();
+            if (string.IsNullOrEmpty(usuarioLogado))
+                return false;
+
+            if (!File.Exists(caminhoArquivoCsvUsuarios))
+                return false;
+
+            var linhas = File.ReadAllLines(caminhoArquivoCsvUsuarios).ToList();
+            bool alterou = false;
+
+            for (int i = 1; i < linhas.Count; i++) // Pula cabeçalho (i=1)
+            {
+                var partes = linhas[i].Split(',');
+                if (partes.Length >= 2 && partes[0].Trim() == usuarioLogado)
+                {
+                    // Atualiza a senha
+                    linhas[i] = $"{partes[0].Trim()}, {novaSenha.Trim()}";
+                    alterou = true;
+                    break;
+                }
+            }
+
+            if (alterou)
+                File.WriteAllLines(caminhoArquivoCsvUsuarios, linhas);
+
+            return alterou;
+        }
+
+
         //-------------------------//
 
 
