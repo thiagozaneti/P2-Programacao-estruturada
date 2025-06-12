@@ -110,7 +110,13 @@ namespace GestaoDeCadastros
 
         private void btn_alterar_senha_usuario_comum_Click(object sender, EventArgs e)
         {
+            string novaSenha = txt_alterar_senha_usuario_comum.Text.Trim();
 
+            if (string.IsNullOrEmpty(novaSenha))
+            {
+                MessageBox.Show("Digite a nova senha!");
+                return;
+            }
         }
     }
 }
